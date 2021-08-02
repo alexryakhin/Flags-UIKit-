@@ -1,24 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOf-Ao-UTT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19129"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Table View Controller-->
+        <scene sceneID="UzG-Z5-qXB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="GqJ-sY-GeH" customClass="TableViewController" customModule="ChallengeProjectDay23" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="JTo-xb-gW2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="kHy-d4-kEZ" customClass="FlagCell" customModule="ChallengeProjectDay23" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.5" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kHy-d4-kEZ" id="ivo-n3-x87">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APg-UY-XYU">
+                                            <rect key="frame" x="50" y="9.5" width="297" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fbx-0u-e6q">
+                                            <rect key="frame" x="10" y="7" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="DkL-WO-IP0"/>
+                                                <constraint firstAttribute="width" constant="30" id="VWs-iv-Gsa"/>
+                                            </constraints>
+                                            <imageReference key="image" image="de"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="APg-UY-XYU" firstAttribute="top" secondItem="ivo-n3-x87" secondAttribute="topMargin" constant="-1.5" id="6X6-J0-k8S"/>
+                                        <constraint firstItem="APg-UY-XYU" firstAttribute="leading" secondItem="Fbx-0u-e6q" secondAttribute="trailing" constant="10" id="Lqb-fz-Vje"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="APg-UY-XYU" secondAttribute="trailing" constant="7" id="Teo-G1-amG"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fbx-0u-e6q" secondAttribute="bottom" constant="7" id="Tgt-AH-D3y"/>
+                                        <constraint firstItem="Fbx-0u-e6q" firstAttribute="leading" secondItem="ivo-n3-x87" secondAttribute="leading" constant="10" id="edo-NU-2O6"/>
+                                        <constraint firstItem="Fbx-0u-e6q" firstAttribute="top" secondItem="ivo-n3-x87" secondAttribute="top" constant="7" id="g3R-bz-odk"/>
+                                        <constraint firstItem="APg-UY-XYU" firstAttribute="centerY" secondItem="Fbx-0u-e6q" secondAttribute="centerY" id="vHn-A8-j79"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="flagImage" destination="Fbx-0u-e6q" id="fRu-uV-VJm"/>
+                                    <outlet property="title" destination="APg-UY-XYU" id="UpN-yz-cvo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GqJ-sY-GeH" id="qlq-HO-Suk"/>
+                            <outlet property="delegate" destination="GqJ-sY-GeH" id="3S7-mf-bWV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3aT-Dp-q6y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4L-H5-qV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="141.96428571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="fPk-bJ-M88">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="l6y-fR-aCz" customClass="DetailViewController" customModule="ChallengeProjectDay23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v5O-Ra-jBv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h7M-fg-TAt">
+                                <rect key="frame" x="47" y="288" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h7M-fg-TAt" secondAttribute="height" multiplier="1:1" id="K9V-wH-BgZ"/>
+                                    <constraint firstAttribute="height" constant="320" id="YSI-tX-dvC"/>
+                                    <constraint firstAttribute="width" constant="320" id="g06-nu-fWa"/>
+                                </constraints>
+                                <imageReference key="image" image="ch"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YcM-Hg-pzq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h7M-fg-TAt" firstAttribute="centerY" secondItem="v5O-Ra-jBv" secondAttribute="centerY" id="BUz-Rl-JNx"/>
+                            <constraint firstItem="h7M-fg-TAt" firstAttribute="centerY" secondItem="v5O-Ra-jBv" secondAttribute="centerY" id="N1s-Qf-NAi"/>
+                            <constraint firstItem="h7M-fg-TAt" firstAttribute="centerX" secondItem="v5O-Ra-jBv" secondAttribute="centerX" id="UhO-ql-tlR"/>
+                            <constraint firstItem="h7M-fg-TAt" firstAttribute="centerX" secondItem="v5O-Ra-jBv" secondAttribute="centerX" id="mwh-I2-Eng"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedFlag" destination="h7M-fg-TAt" id="FDK-aN-ECf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Lw-yP-Tvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.5535714285713" y="150.72463768115944"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uYO-hm-zWV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LOf-Ao-UTT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eex-QY-gB8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GqJ-sY-GeH" kind="relationship" relationship="rootViewController" id="UjH-Cz-jXf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8d-W8-AMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181.15942028985509" y="141.96428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ch" width="1280" height="1280"/>
+        <image name="de" width="1280" height="768"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
